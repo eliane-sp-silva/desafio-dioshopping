@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '5px',
     },
     paper: {
-      padding: theme.spacing(2),
+      padding: theme.spacing(1),
       textAlign: 'center'
     },
   }));
@@ -45,7 +45,9 @@ const HomePage = () => {
     }
 
     return(
-        <Grid container spacing={3} className={classes.root}>
+        <Grid container 
+        spacing={2} 
+        className={classes.root}>
             <Grid item xs={3}>
                 <Paper className={classes.paper}>
                     <Typography variant='h6'>

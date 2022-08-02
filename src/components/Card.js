@@ -8,6 +8,10 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(1),
       textAlign: 'center'
     },
+    grid: {
+        margin: 0,  
+        padding: 0 
+    }
   }));
 
 const CardList = ({ product, children }) => {
@@ -16,15 +20,20 @@ const CardList = ({ product, children }) => {
     const classes = useStyles();
 
     return(
-        <Grid item xs={4}>
+        <Grid 
+        item xs={4}
+        className={classes.grid}
+        >
             <Card>
             <Paper 
             className={classes.paper}
             elevation={3}
             >
-                <Grid container direction='column'>
+                <Grid container
+                
+                 direction='column'>
                     <Grid item>
-                    <img width="160px" height={140} src={product.image} alt={product.name_product}/>
+                    <img width="140px" height={140} src={product.image} alt={product.name_product}/>
                     <Typography variant='h6'>
                         {children}
                     </Typography>
